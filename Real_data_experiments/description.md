@@ -16,7 +16,9 @@ This folder contains running codes for experiments on camelyon17, cifar10, cinic
 
 ## Default running command
 
-# Train ResNet-50 on Camelyon17 with pretrained weights and robust subsample of size 10000 (5000 for random selection and 5000 for uniform selection). Indices file saved by SimSRT.ipynb should be pass to --robust-indices so that it can integrate with randomly selected samples.
+# Train ResNet-50 on Camelyon17 with pretrained weights 
+
+Robust subsample of size 10000 (5000 for random selection and 5000 for uniform selection). Indices file saved by SimSRT.ipynb should be pass to --robust-indices so that it can integrate with randomly selected samples.
 ```
 python main_cls_camelyon17.py -a resnet50 --lr 0.001 --schedule 5 9  --batch-size 32 --robust-size 32 --subsetsize 5000 --epochs 10 --pretrained checkpoint_best_camelyon17.pth.tar --dist-url 'tcp://localhost:10001' --print-freq 300 --world-size 1 --rank 0 --learning-mode subset --robust-indices camelyon17_5000_unique.csv   --weight-decay 0  --rho 1 --save_dir record/camelyon17_10000/
 ```

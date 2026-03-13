@@ -6,6 +6,7 @@ This folder contains running codes for experiments on camelyon17, cifar10, cinic
 - For using CINIC-10 dataset. We refer to https://github.com/BayesWatch/cinic-10 where the original datasets can be downloaded and cifar10, imagenet can be splited into training and testing datasets following instructions therein.
 - For using Camelyon17 dataset. We refer to https://github.com/p-lambda/wilds where they provide necessary tools for downloading and using Camelyon17 dataset.
 - Once the datasets are ready, for complex image classification problems. Please follow https://github.com/facebookresearch/moco/tree/KaimingHe-patch-1?tab=coc-ov-file and run `main_moco.py` to train self-supervised model for extracting meaningful representations of image data. Utilizing self-supervised models improves the performance of supervised training and the low dimension representations are better suited for subsampling algorithm such as SimSRT rather than the raw input of image data.
+- `Diabetes_and_Vessel.R` contains code for reproducing experiments on Diabetes dataset and Vessel dataset. We use h2o package for modeling Diabetes data with GBM (Gradient Boosting Machine) and modeling Vessel data with XGBoost (Extreme Gradient Boosting Tree). 
 
 ## Steps
 
